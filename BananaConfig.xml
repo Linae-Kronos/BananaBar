@@ -3,7 +3,7 @@
   <Frame name="BananaConfigFrame" hidden="true" parent="UIParent" movable="true" clampedToScreen="true">
     <!--<FrameSkin skinid="f15d4970-d66d-444e-bb2d-1ad102c87fed" frameid="f15d4971-d66d-444e-bb2d-1ad102c87fed" />-->
     <Size>
-      <AbsDimension x="310" y="459" />
+      <AbsDimension x="310" y="519" />
     </Size>
     <Anchors>
       <Anchor point="CENTER" relativeTo="UIParent">
@@ -1366,7 +1366,7 @@
       <Frame>
         <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508888-59c2-4f83-ae10-27aaad48391b" />-->
         <Size>
-          <AbsDimension x="293" y="390" />
+          <AbsDimension x="293" y="450" />
         </Size>
         <Anchors>
           <Anchor point="TOPLEFT">
@@ -1438,6 +1438,97 @@
             <CheckedTexture file="Interface\Buttons\UI-CheckBox-Check" />
             <DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled" />
           </CheckButton>
+
+<CheckButton name="$parentCheckButtonShowPrintMessages">
+  <Size>
+    <AbsDimension x="32" y="32" />
+  </Size>
+  <Anchors>
+    <Anchor point="TOPLEFT">
+      <Offset>
+        <AbsDimension x="26" y="-338" />
+      </Offset>
+    </Anchor>
+  </Anchors>
+  <Layers>
+    <Layer>
+      <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Show print messages">
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="-2" y="0" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <FontHeight>
+          <AbsValue val="10" />
+        </FontHeight>
+        <Color r="1" g="0.8196079" b="0" />
+        <Shadow>
+          <Color r="0" g="0" b="0" />
+          <Offset>
+            <AbsDimension x="1" y="-1" />
+          </Offset>
+        </Shadow>
+      </FontString>
+    </Layer>
+  </Layers>
+  <Scripts>
+    <OnClick>BananaConfig_ValueChangedShowPrintMessages();</OnClick>
+    <OnValueChanged>BananaConfig_ValueChangedShowPrintMessages();</OnValueChanged>
+  </Scripts>
+  <NormalTexture file="Interface\Buttons\UI-CheckBox-Up" />
+  <PushedTexture file="Interface\Buttons\UI-CheckBox-Down" />
+  <HighlightTexture file="Interface\Buttons\UI-CheckBox-Highlight" alphaMode="ADD" />
+  <CheckedTexture file="Interface\Buttons\UI-CheckBox-Check" />
+  <DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled" />
+</CheckButton>
+
+<CheckButton name="$parentCheckButtonShowDebugMessages">
+  <Size>
+    <AbsDimension x="32" y="32" />
+  </Size>
+  <Anchors>
+    <Anchor point="TOPLEFT">
+      <Offset>
+        <AbsDimension x="26" y="-365" />
+      </Offset>
+    </Anchor>
+  </Anchors>
+  <Layers>
+    <Layer>
+      <FontString name="$parentText" font="Fonts\FRIZQT__.TTF" text="Show debug messages">
+        <Anchors>
+          <Anchor point="LEFT" relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="-2" y="0" />
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <FontHeight>
+          <AbsValue val="10" />
+        </FontHeight>
+        <Color r="1" g="0.8196079" b="0" />
+        <Shadow>
+          <Color r="0" g="0" b="0" />
+          <Offset>
+            <AbsDimension x="1" y="-1" />
+          </Offset>
+        </Shadow>
+      </FontString>
+    </Layer>
+  </Layers>
+  <Scripts>
+    <OnClick>BananaConfig_ValueChangedShowDebugMessages();</OnClick>
+    <OnValueChanged>BananaConfig_ValueChangedShowDebugMessages();</OnValueChanged>
+  </Scripts>
+  <NormalTexture file="Interface\Buttons\UI-CheckBox-Up" />
+  <PushedTexture file="Interface\Buttons\UI-CheckBox-Down" />
+  <HighlightTexture file="Interface\Buttons\UI-CheckBox-Highlight" alphaMode="ADD" />
+  <CheckedTexture file="Interface\Buttons\UI-CheckBox-Check" />
+  <DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled" />
+</CheckButton>
+
           <CheckButton name="$parentCheckButtonGreyOutDeath">
             <!--<FrameSkin skinid="dcb143e1-a4ab-4e7c-b934-1efa40101d21" frameid="2d508886-59c2-4f83-ae10-27aaad48391b"><Property name="Size">&lt;?xml version="1.0"?&gt;
 &lt;Size xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -1599,7 +1690,7 @@
             <Anchors>
               <Anchor point="TOPLEFT">
                 <Offset>
-                  <AbsDimension x="25" y="-349" />
+                  <AbsDimension x="25" y="-414" />
                 </Offset>
               </Anchor>
             </Anchors>
