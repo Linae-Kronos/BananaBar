@@ -2,26 +2,50 @@
 	<Binding name="BANANA_TARGET_SYMBOL1" header="BANANA_PLUGINNAME">
 		Banana_TargetSymbol1()
 	</Binding>
-	<Binding name="BANANA_TARGET_SYMBOL2" header="BANANA_PLUGINNAME">
+	<Binding name="BANANA_TARGET_SYMBOL2" >
 		Banana_TargetSymbol2()
 	</Binding>
-	<Binding name="BANANA_TARGET_SYMBOL3" header="BANANA_PLUGINNAME">
+	<Binding name="BANANA_TARGET_SYMBOL3">
 		Banana_TargetSymbol3()
 	</Binding>
-	<Binding name="BANANA_TARGET_SYMBOL4" header="BANANA_PLUGINNAME">
+	<Binding name="BANANA_TARGET_SYMBOL4">
 		Banana_TargetSymbol4()
 	</Binding>
-	<Binding name="BANANA_TARGET_SYMBOL5" header="BANANA_PLUGINNAME">
+	<Binding name="BANANA_TARGET_SYMBOL5">
 		Banana_TargetSymbol5()
 	</Binding>
-	<Binding name="BANANA_TARGET_SYMBOL6" header="BANANA_PLUGINNAME">
+	<Binding name="BANANA_TARGET_SYMBOL6">
 		Banana_TargetSymbol6()
 	</Binding>
-	<Binding name="BANANA_TARGET_SYMBOL7" header="BANANA_PLUGINNAME">
+	<Binding name="BANANA_TARGET_SYMBOL7">
 		Banana_TargetSymbol7()
 	</Binding>
-	<Binding name="BANANA_TARGET_SYMBOL8" header="BANANA_PLUGINNAME">
+	<Binding name="BANANA_TARGET_SYMBOL8">
 		Banana_TargetSymbol8()
+	</Binding>
+	<Binding name="BANANA_SETTARGET_SYMBOL1">
+		Banana_SetRaidSymbol(1)
+	</Binding>
+	<Binding name="BANANA_SETTARGET_SYMBOL2">
+		Banana_SetRaidSymbol(2)
+	</Binding>
+	<Binding name="BANANA_SETTARGET_SYMBOL3">
+		Banana_SetRaidSymbol(3)
+	</Binding>
+	<Binding name="BANANA_SETTARGET_SYMBOL4">
+		Banana_SetRaidSymbol(4)
+	</Binding>
+	<Binding name="BANANA_SETTARGET_SYMBOL5">
+		Banana_SetRaidSymbol(5)
+	</Binding>
+	<Binding name="BANANA_SETTARGET_SYMBOL6">
+		Banana_SetRaidSymbol(6)
+	</Binding>
+	<Binding name="BANANA_SETTARGET_SYMBOL7">
+		Banana_SetRaidSymbol(7)
+	</Binding>
+	<Binding name="BANANA_SETTARGET_SYMBOL8">
+		Banana_SetRaidSymbol(8)
 	</Binding>
 	<Binding name="Reset Button Positions" header="BANANA_PLUGINNAME">
 		Banana_ResetAll();

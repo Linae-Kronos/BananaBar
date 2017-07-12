@@ -21,6 +21,14 @@ BINDING_NAME_BANANA_TARGET_SYMBOL6 = "Target Symbol 6 ("..RAID_TARGET_6..")";
 BINDING_NAME_BANANA_TARGET_SYMBOL7 = "Target Symbol 7 ("..RAID_TARGET_7..")";
 BINDING_NAME_BANANA_TARGET_SYMBOL8 = "Target Symbol 8 ("..RAID_TARGET_8..")";
 BINDING_NAME_BANANA_TARGET_SYMBOL9 = "Target Symbol 9 (Huntersmark)";
+BINDING_NAME_BANANA_SETTARGET_SYMBOL1 = "Set Symbol "..RAID_TARGET_1.." (w/ mouseover)"
+BINDING_NAME_BANANA_SETTARGET_SYMBOL2 = "Set Symbol "..RAID_TARGET_2.." (w/ mouseover)"
+BINDING_NAME_BANANA_SETTARGET_SYMBOL3 = "Set Symbol "..RAID_TARGET_3.." (w/ mouseover)"
+BINDING_NAME_BANANA_SETTARGET_SYMBOL4 = "Set Symbol "..RAID_TARGET_4.." (w/ mouseover)"
+BINDING_NAME_BANANA_SETTARGET_SYMBOL5 = "Set Symbol "..RAID_TARGET_5.." (w/ mouseover)"
+BINDING_NAME_BANANA_SETTARGET_SYMBOL6 = "Set Symbol "..RAID_TARGET_6.." (w/ mouseover)"
+BINDING_NAME_BANANA_SETTARGET_SYMBOL7 = "Set Symbol "..RAID_TARGET_7.." (w/ mouseover)"
+BINDING_NAME_BANANA_SETTARGET_SYMBOL8 = "Set Symbol "..RAID_TARGET_8.." (w/ mouseover)"
 
 --"Interface\TargetingFrame\UI-RaidTargetingIcons"
 local snipershot = "Interface\\Icons\\Ability_Hunter_SniperShot";
@@ -373,27 +381,23 @@ function Banana_ButtonOnLeave()
 end
 
 function Banana_SetRaidSymbol(index)
-	if not UnitExists("target") then
-        Banana_TargetRaidSymbol(index);
-        if not UnitExists("target") then
-            Banana_Print("Not target selected.");
-            Banana_PlayError();
-            return;
-        end
-    end
-    
-    local oldindex = (Banana_GetSymbol("TARGET") or 0);
-	if oldindex == index then
-		Banana_SetSymbol("TARGET", 0)
-		Banana_PlayRemove1();
-	else
-		Banana_SetSymbol("TARGET", index)
+ 	local unit = nil
+ 	if UnitExists("mouseover") or UnitExists("target") then
+	 	if UnitExists("mouseover") then
+	 		unit = "mouseover"
+		elseif UnitExists("target") then
+			unit = "target"
+	 	end
+	 	local oldindex = (Banana_GetSymbol(unit) or 0)
+		if oldindex == index then
+			Banana_SetSymbol(unit, 0)
+			Banana_PlayRemove1()
+		else
+			Banana_SetSymbol(unit, index)
+		end
+		Banana_UpdateStatus()
 	end
-	Banana_UpdateStatus();
 end
-
-
-
 
 function Banana_TargetRaidSymbol(index)
   for i = 1, 40, 1 do
@@ -950,6 +954,10 @@ end
 
 function Banana_TargetSymbol9()
 	Banana_TargetRaidSymbol(9);
+end
+
+function Banana_SetTargetSymbol8()
+	
 end
 
 function Banana_ShowDebugInfo()
